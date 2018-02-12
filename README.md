@@ -128,5 +128,5 @@ If you use this code for your research, please cite our [paper](https://arxiv.or
 }
 ```
 
-## Acknowledgements: 
+## Acknowledgements
 We thank Jelle Goeman for helping running code from his packages and reproducing results in his papers. We also thank Lihua Lei for sharing code for SCR-DAG and BH-DAG.
