@@ -54,8 +54,18 @@ python plot.py
 
 The generated plots can be found in DAGGER/graph_structure/results. See `core/algorithm.py` and `GO/run_simulations.py` for details. 
 
-![alt-text-1](https://raw.githubusercontent.com/Jianbo-Lab/DAGGER/master/graph_structure/results/figs/mountain-valley-power.eps) ![alt-text-2](https://github.com/Jianbo-Lab/DAGGER/blob/master/graph_structure/results/figs/mountain-valley-power.eps)
-<center>This figure shows the power of various algorithms on the entire GO graph (left) and the subgraph rooted at cell proliferation (right), under the setting of independent p-values (top) and Simes' p-values (bottom). </center>
+
+|*<center>Power comparison for full and subgraph GOs with independent and Simes p-values. </center>*|
+|:--:| 
+|![alt-text-1](https://github.com/Jianbo-Lab/DAGGER/blob/master/figures/power.png?raw=true "Power comparison for full and subgraph GOs with independent and Simes p-values.")| 
+
+<!-- |*<center>FDR comparison for full and subgraph GOs with independent and Simes p-values. </center>*|
+|:--:| 
+|![alt-text-2](https://github.com/Jianbo-Lab/DAGGER/blob/master/figures/fdr.png?raw=true)|
+
+|*<center>Time comparison for full and subgraph GOs with independent and Simes p-values. </center>*|
+|:--:| 
+|![alt-text-3](https://github.com/Jianbo-Lab/DAGGER/blob/master/figures/time.png?raw=true)| --> 
 
 ## Running experiments in Section 4.2 and Section 4.3
 We provide codes for reproducing figures in Section 4.2 and Section 4.3. Run the following commands in shell:
@@ -69,12 +79,41 @@ cd DAGGER
 cd graph_structure
 # Running experiments in Section 4.2.
 python run_simulations.py --experiment BH_vs_DAGGER --n_replications 10
+```
 
+|*<center>BH vs. DAGGER. </center>*|
+|:--:| 
+|![alt-text-3](https://github.com/Jianbo-Lab/DAGGER/blob/master/figures/bh.png?raw=true)|
+
+```shell
 # Running experiments in Section 4.3
-python run_simulations.py --experiment mountain_vs_valley --n_replications 10
-python run_simulations.py --experiment shallow_vs_deep --n_replications 10
+# Mountain vs. Valley. 
+python run_simulations.py --experiment mountain_vs_valley --n_replications 10 
+```
+
+|*<center>Mountain vs. Valley. </center>*|
+|:--:| 
+|![alt-text-3](https://github.com/Jianbo-Lab/DAGGER/blob/master/figures/mountain_vs_valley.png?raw=true)|
+
+```shell
+# Running experiments in Section 4.3
+# Shallow vs. Deep.  
+python run_simulations.py --experiment shallow_vs_deep --n_replications 10 
+```
+
+|*<center>Shallow vs. Deep. </center>*|
+|:--:| 
+|![alt-text-4](https://github.com/Jianbo-Lab/DAGGER/blob/master/figures/shallow_vs_deep.png?raw=true)|
+
+```shell
+# Running experiments in Section 4.3
+# Diamond vs. Hourglass.  
 python run_simulations.py --experiment diamond_vs_hourglass --n_replications 10
 ```
+
+|*<center>Diamond vs. Hourglass. </center>*|
+|:--:| 
+|![alt-text-5](https://github.com/Jianbo-Lab/DAGGER/blob/master/figures/diamond_vs_hourglass.png?raw=true)|
 
 The generated plots can be found in DAGGER/graph_structure/results. See `core/algorithm.py` and `graph_structure/run_simulations.py` for details.
 
