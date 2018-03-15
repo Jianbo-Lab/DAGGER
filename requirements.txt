@@ -2,3 +2,4 @@ numpy
 scipy 
 statsmodels
 matplotlib 
+networkx

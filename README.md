@@ -8,6 +8,7 @@ The code for DAGGER runs with Python 2.7. Please `pip install` the following pac
 - `scipy`  
 - `statsmodels`
 - `matplotlib`
+- `networkx`
 
 Or you may run the following and in shell to install the required packages:
 ```shell
@@ -77,8 +78,7 @@ cd DAGGER
 ############################################### 
 cd graph_structure
 # Running experiments in Section 4.2.
-python run_simulations.py --experiment BH_vs_DAGGER --n_replications 10
-```
+c```
 
 |*<center>BH vs. DAGGER. </center>*|
 |:--:| 
