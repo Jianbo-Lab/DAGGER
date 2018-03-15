@@ -1,0 +1,5 @@
+numpy
+scipy
+graph_tool
+statsmodels
+matplotlib 
