@@ -5,8 +5,7 @@ Code for replicating the experiments in the paper [DAGGER: A sequential algorith
 ## Dependencies
 The code for DAGGER runs with Python 2.7. Please `pip install` the following packages:
 - `numpy`
-- `scipy` 
-- `graph_tool`
+- `scipy`  
 - `statsmodels`
 - `matplotlib`
 

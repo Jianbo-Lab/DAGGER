@@ -1,5 +1,4 @@
 numpy
-scipy
-graph_tool
+scipy 
 statsmodels
 matplotlib 

@@ -1,27 +1,38 @@
-import graph_tool.all as gt 
+# import graph_tool.all as gt 
 import numpy as np  
 from numpy import euler_gamma
 from scipy.special import digamma
 from collections import Counter
+import networkx
+# def construct_graph(adj_matrix):
+# 	g = gt.Graph()
+# 	num_v = len(adj_matrix)
+# 	g.add_vertex(n = num_v)
 
-def construct_graph(adj_matrix):
-	g = gt.Graph()
-	num_v = len(adj_matrix)
-	g.add_vertex(n = num_v)
+# 	rowids,colids = np.where(adj_matrix == 1)
+# 	edge_list = zip(rowids,colids)
+# 	g.add_edge_list(edge_list = edge_list) 
+# 	return g
 
-	rowids,colids = np.where(adj_matrix == 1)
-	edge_list = zip(rowids,colids)
-	g.add_edge_list(edge_list = edge_list) 
-	return g
+# def topological_sort(adj_matrix):
+# 	"""
+# 	Sort nodes to topological order. 
+# 	Output: an array with sorted indices of nodes.
+# 	"""
+# 	g = construct_graph(adj_matrix)
+# 	sorted_inds = gt.topological_sort(g)
+# 	return np.array(sorted_inds)
 
 def topological_sort(adj_matrix):
 	"""
 	Sort nodes to topological order. 
 	Output: an array with sorted indices of nodes.
 	"""
-	g = construct_graph(adj_matrix)
-	sorted_inds = gt.topological_sort(g)
-	return np.array(sorted_inds)
+	g = networkx.from_numpy_matrix(adj_matrix,create_using=networkx.MultiDiGraph())
+	sorted_inds = networkx.topological_sort(g)
+	print(sorted_inds)
+	adj = adj_matrix[sorted_inds][:,sorted_inds]
+	return adj
 
 def find_one_indices(lst):
 	return np.where(lst == 1)[0]
